@@ -1,0 +1,11 @@
+# Este é um arquivo de certificado DER de exemplo para o DVIA-v2
+# Em um ambiente real, este seria um certificado DER válido
+# 
+# Para gerar um certificado DER real para SSL pinning:
+# 1. Obter o certificado do servidor: 
+#    openssl s_client -connect vulnerableapp.com:443 -showcerts
+# 2. Converter para DER:
+#    openssl x509 -in certificate.pem -outform DER -out vulnerableapp.der
+#
+# O arquivo real seria binário e não legível como texto
+# Este arquivo é apenas para fins de demonstração do DVIA-v2

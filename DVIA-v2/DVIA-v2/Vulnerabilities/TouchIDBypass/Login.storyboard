@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="DVIA_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login - Info.plist Storage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="title-label">
+                                <rect key="frame" x="20" y="59" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="username-textfield">
+                                <rect key="frame" x="20" y="100" width="353" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="password-textfield">
+                                <rect key="frame" x="20" y="154" width="353" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Login with Info.plist storage results will appear here..." translatesAutoresizingMaskIntoConstraints="NO" id="result-textview">
+                                <rect key="frame" x="20" y="208" width="353" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="login-button">
+                                <rect key="frame" x="20" y="378" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hgt-1"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biometric-button">
+                                <rect key="frame" x="20" y="428" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hgt-2"/>
+                                </constraints>
+                                <state key="normal" title="Biometric Login"/>
+                                <connections>
+                                    <action selector="biometricButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="retrieve-button">
+                                <rect key="frame" x="20" y="478" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hgt-3"/>
+                                </constraints>
+                                <state key="normal" title="Retrieve Credentials"/>
+                                <connections>
+                                    <action selector="retrieveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clear-button">
+                                <rect key="frame" x="20" y="528" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hgt-4"/>
+                                </constraints>
+                                <state key="normal" title="Clear Credentials"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bypass-button">
+                                <rect key="frame" x="20" y="578" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hgt-5"/>
+                                </constraints>
+                                <state key="normal" title="Bypass Login (Vulnerable)"/>
+                                <connections>
+                                    <action selector="bypassButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="insecure-button">
+                                <rect key="frame" x="20" y="628" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hgt-6"/>
+                                </constraints>
+                                <state key="normal" title="Store Insecurely (Vulnerable)"/>
+                                <connections>
+                                    <action selector="insecureButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="act-6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Ready to login with Info.plist storage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="status-label">
+                                <rect key="frame" x="20" y="678" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="title-label" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="top-1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" constant="20" id="trailing-1"/>
+                            <constraint firstItem="title-label" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-1"/>
+                            <constraint firstItem="username-textfield" firstAttribute="top" secondItem="title-label" secondAttribute="bottom" constant="20" id="top-2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="username-textfield" secondAttribute="trailing" constant="20" id="trailing-2"/>
+                            <constraint firstItem="username-textfield" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-2"/>
+                            <constraint firstItem="password-textfield" firstAttribute="top" secondItem="username-textfield" secondAttribute="bottom" constant="20" id="top-3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="password-textfield" secondAttribute="trailing" constant="20" id="trailing-3"/>
+                            <constraint firstItem="password-textfield" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-3"/>
+                            <constraint firstItem="result-textview" firstAttribute="top" secondItem="password-textfield" secondAttribute="bottom" constant="20" id="top-4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="result-textview" secondAttribute="trailing" constant="20" id="trailing-4"/>
+                            <constraint firstItem="result-textview" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-4"/>
+                            <constraint firstItem="login-button" firstAttribute="top" secondItem="result-textview" secondAttribute="bottom" constant="20" id="top-5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="login-button" secondAttribute="trailing" constant="20" id="trailing-5"/>
+                            <constraint firstItem="login-button" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-5"/>
+                            <constraint firstItem="biometric-button" firstAttribute="top" secondItem="login-button" secondAttribute="bottom" constant="20" id="top-6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="biometric-button" secondAttribute="trailing" constant="20" id="trailing-6"/>
+                            <constraint firstItem="biometric-button" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-6"/>
+                            <constraint firstItem="retrieve-button" firstAttribute="top" secondItem="biometric-button" secondAttribute="bottom" constant="20" id="top-7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="retrieve-button" secondAttribute="trailing" constant="20" id="trailing-7"/>
+                            <constraint firstItem="retrieve-button" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-7"/>
+                            <constraint firstItem="clear-button" firstAttribute="top" secondItem="retrieve-button" secondAttribute="bottom" constant="20" id="top-8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="clear-button" secondAttribute="trailing" constant="20" id="trailing-8"/>
+                            <constraint firstItem="clear-button" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-8"/>
+                            <constraint firstItem="bypass-button" firstAttribute="top" secondItem="clear-button" secondAttribute="bottom" constant="20" id="top-9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bypass-button" secondAttribute="trailing" constant="20" id="trailing-9"/>
+                            <constraint firstItem="bypass-button" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-9"/>
+                            <constraint firstItem="insecure-button" firstAttribute="top" secondItem="bypass-button" secondAttribute="bottom" constant="20" id="top-10"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="insecure-button" secondAttribute="trailing" constant="20" id="trailing-10"/>
+                            <constraint firstItem="insecure-button" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-10"/>
+                            <constraint firstItem="status-label" firstAttribute="top" secondItem="insecure-button" secondAttribute="bottom" constant="20" id="top-11"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="status-label" secondAttribute="trailing" constant="20" id="trailing-11"/>
+                            <constraint firstItem="status-label" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="leading-11"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="biometricButton" destination="biometric-button" id="outlet-1"/>
+                        <outlet property="bypassButton" destination="bypass-button" id="outlet-2"/>
+                        <outlet property="clearButton" destination="clear-button" id="outlet-3"/>
+                        <outlet property="insecureButton" destination="insecure-button" id="outlet-4"/>
+                        <outlet property="loginButton" destination="login-button" id="outlet-5"/>
+                        <outlet property="passwordTextField" destination="password-textfield" id="outlet-6"/>
+                        <outlet property="retrieveButton" destination="retrieve-button" id="outlet-7"/>
+                        <outlet property="resultTextView" destination="result-textview" id="outlet-8"/>
+                        <outlet property="statusLabel" destination="status-label" id="outlet-9"/>
+                        <outlet property="usernameTextField" destination="username-textfield" id="outlet-10"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
